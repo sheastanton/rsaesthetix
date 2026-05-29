@@ -1,6 +1,147 @@
-:root {
-  --black: #050505;
-  --red: #d00000;
-  --white: #ffffff;
-  --gray: #b5b5b5;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #050505;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.85);
+  z-index: 10;
+}
+
+.logo {
+  width: 190px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  letter-spacing: 1px;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #000 40%, rgba(0,0,0,0.4)), url("../images/backgroundtest.JPG");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+h1 {
+  font-size: 58px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.hero p {
+  color: #d00000;
+  font-size: 22px;
+  margin: 25px 0;
+  letter-spacing: 4px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 35px;
+  border: 1px solid #d00000;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  background: #d00000;
+}
+
+.section {
+  padding: 90px 8%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.cards div {
+  border: 1px solid #222;
+  padding: 40px 20px;
+  background: #0b0b0b;
+  font-size: 20px;
+}
+
+.cards div:hover {
+  border-color: #d00000;
+}
+
+.dark {
+  background: #0a0a0a;
+}
+
+.features {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  color: #d00000;
+  text-transform: uppercase;
+}
+
+.contact p {
+  margin: 12px 0;
+  color: #ccc;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #777;
+  border-top: 1px solid #111;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .logo {
+    width: 150px;
+  }
 }
