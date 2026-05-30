@@ -355,54 +355,50 @@ body {
 }
 
 footer {
-  padding: 80px 6%;
+  padding: 85px 6% 35px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  align-items: start;
+  gap: 80px;
   background: #080808;
   color: #b8b8b8;
 }
 
 .footer-logo {
-  width: 220px;
-  margin-bottom: 20px;
+  width: 280px;
+  margin-bottom: 28px;
+}
+
+footer p {
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 footer h4 {
   color: white;
-  font-size: 22px;
-  margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 25px;
 }
 
-footer p {
-  margin-bottom: 12px;
+.footer-socials {
+  justify-self: center;
 }
 
 .footer-socials h4 {
-  font-size: 28px;
-  margin-bottom: 28px;
+  font-size: 30px;
+  margin-bottom: 25px;
 }
 
 .social-icons {
   display: grid;
-  grid-template-columns: repeat(2, 70px);
-  gap: 22px 18px;
-  max-width: 160px;
-  margin-top: 25px;
+  grid-template-columns: repeat(2, 58px);
+  gap: 18px 16px;
 }
 
 .social-icons a {
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  background: #1b1b1b;
-  border: 1px solid rgba(255,255,255,0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #d00000;
-  font-size: 34px;
-  transition: 0.3s ease;
+  width: 52px;
+  height: 52px;
+  font-size: 26px;
 }
 
 .social-icons a:hover {
@@ -416,7 +412,7 @@ footer p {
   grid-column: 1 / -1;
   text-align: center;
   padding-top: 35px;
-  margin-top: 35px;
+  margin-top: 45px;
   border-top: 1px solid rgba(255,255,255,0.08);
   color: #9b9b9b;
   font-size: 18px;
