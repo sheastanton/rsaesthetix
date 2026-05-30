@@ -40,9 +40,10 @@ body {
 }
 
 .hero {
-  min-height: 85vh;
+  min-height: 92vh;
   background:
-    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
+    radial-gradient(circle at center, rgba(208,0,0,0.20), transparent 28%),
+    linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.95)),
     url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
@@ -50,26 +51,43 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero h1 {
-  font-size: 82px;
-  margin-bottom: 20px;
+  font-size: clamp(56px, 8vw, 110px);
+  line-height: 0.95;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  text-shadow:
+    0 5px 0 #000,
+    0 0 28px rgba(255,0,0,0.35);
+}
+
+.hero h1 span {
+  color: #d00000;
 }
 
 .hero p {
-  font-size: 30px;
+  font-size: 34px;
   margin-bottom: 35px;
+  color: #f5f5f5;
+  letter-spacing: 1px;
 }
 
 .badge {
   margin: 0 auto 45px;
-  padding: 20px 45px;
-  background: rgba(20,20,20,.85);
-  border: 1px solid #333;
-  border-radius: 50px;
+  padding: 22px 55px;
+  background: linear-gradient(145deg, #191919, #070707);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 60px;
   width: fit-content;
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.12);
 }
 
 .badge span {
@@ -78,19 +96,25 @@ body {
 }
 
 .badge strong {
-  color: #d00000;
-  font-size: 20px;
+  color: #ff0000;
+  font-size: 24px;
+  text-shadow: 0 0 18px rgba(255,0,0,0.45);
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
+.hero-buttons .btn {
+  font-size: 20px;
+  padding: 20px 50px;
+  border-radius: 10px;
 }
 
 .btn.outline {
   background: transparent;
   border: 2px solid white;
+}
+
+.btn.red {
+  background: linear-gradient(145deg, #ff0000, #9f0000);
+  box-shadow: 0 15px 35px rgba(208,0,0,0.45);
 }
 
 .section {
@@ -103,10 +127,11 @@ body {
 }
 
 .underline {
-  width: 90px;
-  height: 4px;
-  background: #d00000;
+  width: 110px;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #ff0000, transparent);
   margin: 18px auto 60px;
+  box-shadow: 0 0 18px rgba(255,0,0,0.65);
 }
 
 .service-grid {
@@ -145,97 +170,328 @@ body {
   margin-top: 35px;
 }
 
-.extra-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+.extras {
+  position: relative;
+  background:
+    radial-gradient(circle at center, rgba(208,0,0,0.13), transparent 38%),
+    #0b0b0b;
 }
 
 .extra-grid div {
-  background: #181818;
-  padding: 30px;
-  border-radius: 8px;
-  font-size: 22px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #202020, #101010);
+  padding: 38px 34px;
+  border-radius: 18px;
+  font-size: 26px;
+  font-weight: 800;
   text-align: left;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    0 18px 35px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.10);
+  transition: 0.3s ease;
+}
+
+.extra-grid div::before {
+  content: "✦";
+  color: #d00000;
+  font-size: 22px;
+  margin-right: 12px;
+}
+
+.extra-grid div::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255,255,255,0.10), transparent 35%, rgba(208,0,0,0.12));
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.extra-grid div:hover {
+  transform: translateY(-7px);
+  border-color: #d00000;
+  color: #fff;
+  box-shadow:
+    0 22px 45px rgba(0,0,0,0.65),
+    0 0 24px rgba(208,0,0,0.35);
+}
+
+.extra-grid div:hover::after {
+  opacity: 1;
 }
 
 .service-area {
-  padding: 90px 6%;
+  padding: 110px 6%;
+  background:
+    radial-gradient(circle at center, rgba(208,0,0,0.16), transparent 42%),
+    #070707;
 }
 
 .area-box {
-  max-width: 900px;
-  background: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  max-width: 1150px;
+  background:
+    linear-gradient(145deg, #252525, #111 55%, #060606);
   margin: auto;
-  padding: 60px;
-  border-radius: 20px;
+  padding: 85px 70px;
+  border-radius: 28px;
   text-align: center;
-  border-top: 4px solid #d00000;
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow:
+    0 0 0 2px rgba(208,0,0,0.65),
+    0 30px 70px rgba(0,0,0,0.75),
+    inset 0 1px 0 rgba(255,255,255,0.12);
+}
+
+.area-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20%;
+  width: 140%;
+  height: 7px;
+  background: linear-gradient(90deg, transparent, #ff0000, #ffffff, #ff0000, transparent);
+  box-shadow: 0 0 24px rgba(255,0,0,0.75);
+}
+
+.area-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(255,255,255,0.07), transparent 35%, rgba(208,0,0,0.10));
+  pointer-events: none;
+}
+
+.area-box h2,
+.area-box h3,
+.area-title,
+.phone-btn,
+.area-note {
+  position: relative;
+  z-index: 2;
 }
 
 .area-box h2 {
-  font-size: 38px;
+  font-size: clamp(40px, 5vw, 68px);
+  line-height: 1.05;
+  margin-bottom: 22px;
+  text-shadow:
+    0 4px 0 #050505,
+    0 0 24px rgba(255,0,0,0.28);
 }
 
 .area-box h3 {
-  color: #d00000;
-  font-size: 34px;
-  margin: 15px 0 35px;
+  color: #ff0000;
+  font-size: clamp(34px, 4vw, 56px);
+  margin: 10px 0 45px;
+  text-shadow: 0 0 22px rgba(255,0,0,0.45);
 }
 
 .area-title {
-  color: #d00000;
+  display: inline-block;
+  color: #ff0000;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 25px;
-}
-
-.area-note {
-  color: #b8b8b8;
-  margin-top: 30px;
+  letter-spacing: 5px;
+  font-weight: 800;
+  margin-bottom: 28px;
   font-size: 18px;
 }
 
-.gallery-box {
-  max-width: 1000px;
-  margin: auto;
-  border-top: 5px solid #d00000;
+.phone-btn {
+  background: linear-gradient(145deg, #ff0000, #9f0000);
+  padding: 20px 48px;
   border-radius: 12px;
+  font-size: 24px;
+  box-shadow:
+    0 14px 35px rgba(208,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.35);
+}
+
+.phone-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 18px 45px rgba(255,0,0,0.65),
+    inset 0 1px 0 rgba(255,255,255,0.45);
+}
+
+.area-note {
+  max-width: 900px;
+  margin: 42px auto 0;
+  color: #c9c9c9;
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+.gallery {
+  position: relative;
+  background:
+    radial-gradient(circle at center, rgba(208,0,0,0.14), transparent 40%),
+    #070707;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.comparison-card {
+  background: linear-gradient(145deg, #202020, #0d0d0d);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-top: 5px solid #d00000;
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.6),
+    0 0 20px rgba(208,0,0,0.18);
+  transition: 0.3s ease;
+}
+
+.comparison-card:hover {
+  transform: translateY(-7px);
+  box-shadow:
+    0 28px 60px rgba(0,0,0,0.75),
+    0 0 28px rgba(208,0,0,0.35);
+}
+
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.before-after div {
+  position: relative;
   overflow: hidden;
 }
 
-.gallery-box img {
+.before-after span {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.before-after div:last-child span {
+  background: #d00000;
+}
+
+.before-after img {
   width: 100%;
+  height: 330px;
+  object-fit: cover;
   display: block;
+  transition: 0.4s ease;
+}
+
+.comparison-card:hover img {
+  transform: scale(1.04);
+}
+
+.featured-comparison {
+  grid-column: 1 / -1;
+}
+
+.featured-comparison .before-after img {
+  height: 420px;
+}
+
+.testimonials {
+  position: relative;
+  background:
+    radial-gradient(circle at center, rgba(208,0,0,0.12), transparent 42%),
+    #080808;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .review-card {
-  background: #1a1a1a;
-  max-width: 1100px;
-  margin: auto;
-  padding: 65px;
-  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #202020, #101010);
+  padding: 42px;
+  border-radius: 18px;
   text-align: left;
+  border: 1px solid rgba(255,255,255,0.08);
   border-bottom: 4px solid #d00000;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  transition: 0.3s ease;
+}
+
+.review-card::before {
+  content: "“";
+  position: absolute;
+  top: -20px;
+  right: 25px;
+  font-size: 120px;
+  color: rgba(208,0,0,0.22);
+  font-family: Georgia, serif;
+}
+
+.review-card:hover {
+  transform: translateY(-7px);
+  border-color: #ff0000;
+  box-shadow:
+    0 22px 55px rgba(0,0,0,0.7),
+    0 0 25px rgba(208,0,0,0.35);
 }
 
 .review-card p {
-  font-size: 25px;
+  position: relative;
+  z-index: 2;
+  font-size: 22px;
   font-style: italic;
-  line-height: 1.8;
+  line-height: 1.7;
+  color: #f5f5f5;
+}
+
+.review-bottom {
+  position: relative;
+  z-index: 2;
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .review-card strong {
-  display: block;
-  color: #d00000;
-  margin-top: 40px;
-  font-size: 22px;
+  color: #ff0000;
+  font-size: 20px;
 }
 
 .review-card span {
-  color: #d00000;
-  float: right;
+  color: #ff0000;
   font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.featured-review {
+  grid-column: 1 / -1;
+  background:
+    radial-gradient(circle at top right, rgba(208,0,0,0.18), transparent 35%),
+    linear-gradient(145deg, #252525, #0b0b0b);
 }
 
 .final-cta {
@@ -458,6 +714,28 @@ footer div:nth-child(2) p {
 
   .logo {
     width: 150px;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .before-after {
+    grid-template-columns: 1fr;
+  }
+
+  .before-after img,
+  .featured-comparison .before-after img {
+    height: 280px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-bottom {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .final-cta {
