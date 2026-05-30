@@ -365,19 +365,23 @@ footer {
 }
 
 .footer-logo {
-  width: 280px;
-  margin-bottom: 28px;
+  width: 360px;
+  margin-bottom: 35px;
 }
 
 footer p {
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 22px;
+  line-height: 1.9;
 }
 
 footer h4 {
-  color: white;
-  font-size: 30px;
-  margin-bottom: 25px;
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+footer div:nth-child(2) p {
+  font-size: 22px;
+  margin-bottom: 8px;
 }
 
 .footer-socials {
@@ -398,7 +402,16 @@ footer h4 {
 .social-icons a {
   width: 52px;
   height: 52px;
-  font-size: 26px;
+  border-radius: 50%;
+  background: #1b1b1b;
+  border: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d00000;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 .social-icons a:hover {
@@ -459,4 +472,8 @@ footer h4 {
     width: 100%;
     padding: 18px 25px;
   }
+
+  .footer-logo {
+  width: 260px;
+}
 }
