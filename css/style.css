@@ -337,6 +337,23 @@ body {
     inset 0 1px 0 rgba(255,255,255,0.45);
 }
 
+.price {
+  color: #ff0000;
+  font-size: 36px;
+  font-weight: 900;
+  margin: 10px 0 30px;
+  text-shadow: 0 0 18px rgba(255, 0, 0, 0.35);
+}
+
+.price span {
+  display: block;
+  color: #b8b8b8;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 footer {
   padding: 80px 6%;
   display: grid;
