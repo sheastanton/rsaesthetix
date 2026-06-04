@@ -45,6 +45,7 @@ body::after {
 }
 
 .nav {
+  position: relative;
   margin: 25px auto 0;
   width: 96%;
   padding: 28px 45px;
@@ -54,6 +55,7 @@ body::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
 
 .logo {
@@ -84,7 +86,6 @@ body::after {
   padding: 100px 20px;
   position: relative;
   overflow: hidden;
-  perspective: 900px; /* makes hover scaling look 3D */
 }
 
 .hero h1,
@@ -773,7 +774,7 @@ footer div:nth-child(2) p {
   border-top: 3px solid #d00000;
   border-radius: 10px;
   box-shadow: 0 18px 35px rgba(0,0,0,0.65);
-  z-index: 100;
+  z-index: 10000;
   overflow: hidden;
 }
 
