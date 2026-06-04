@@ -706,6 +706,142 @@ footer div:nth-child(2) p {
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: transparent;
+  color: #f5f5f5;
+  border: none;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 14px 10px;
+  letter-spacing: 0.5px;
+}
+
+.dropbtn i {
+  color: #d00000;
+  font-size: 12px;
+  margin-left: 7px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-top: 3px solid #d00000;
+  border-radius: 10px;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.65);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #f5f5f5;
+  text-decoration: none;
+  padding: 16px 18px;
+  font-size: 16px;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: 0.25s ease;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background: #d00000;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+.about-section,
+.policies-section {
+  position: relative;
+  background:
+    radial-gradient(circle at center, rgba(208,0,0,0.11), transparent 42%),
+    #080808;
+}
+
+.about-box {
+  max-width: 1050px;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #202020, #101010);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-bottom: 4px solid #d00000;
+  padding: 55px;
+  text-align: left;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.about-box p {
+  font-size: 23px;
+  line-height: 1.7;
+  color: #d6d6d6;
+  margin-bottom: 22px;
+}
+
+.about-box p:last-child {
+  margin-bottom: 0;
+}
+
+.policies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.policy-card {
+  background: linear-gradient(145deg, #202020, #101010);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-top: 5px solid #d00000;
+  padding: 40px;
+  text-align: left;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+}
+
+.policy-card h3 {
+  color: #ff0000;
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.policy-card p {
+  color: #d6d6d6;
+  font-size: 20px;
+  line-height: 1.55;
+}
+
 @media (max-width: 850px) {
   .hero h1 {
     font-size: 48px;
@@ -767,5 +903,47 @@ footer div:nth-child(2) p {
 
   .footer-logo {
   width: 260px;
+}
+
+.nav {
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+
+.nav-menu {
+  order: 3;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dropbtn {
+  font-size: 15px;
+  padding: 10px 8px;
+}
+
+.dropdown-content {
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 210px;
+}
+
+.policies-grid {
+  grid-template-columns: 1fr;
+}
+
+.about-box {
+  padding: 32px;
+}
+
+.about-box p,
+.policy-card p {
+  font-size: 18px;
+}
+
+.policy-card {
+  padding: 30px;
 }
 }
