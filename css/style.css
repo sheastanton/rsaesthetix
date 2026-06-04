@@ -863,6 +863,10 @@ footer div:nth-child(2) p {
   line-height: 1.55;
 }
 
+.featured-policy {
+  grid-column: 1 / -1;
+}
+
 .card,
 .review-card,
 .policy-card,
