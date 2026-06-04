@@ -8,6 +8,40 @@ body {
   background: #0b0b0b;
   color: #f5f5f5;
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(208,0,0,0.28), transparent 28%),
+    radial-gradient(circle at 80% 10%, rgba(255,255,255,0.08), transparent 22%),
+    radial-gradient(circle at 50% 80%, rgba(208,0,0,0.18), transparent 30%),
+    linear-gradient(135deg, #050505 0%, #111 45%, #050505 100%);
+}
+
+.site-wrapper {
+  position: relative;
+  z-index: 1; /* all content above the 3D background */
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform: perspective(700px) rotateX(60deg) scale(1.8);
+  transform-origin: center bottom;
+  opacity: 0.22;
+  pointer-events: none;
 }
 
 .nav {
@@ -41,10 +75,6 @@ body {
 
 .hero {
   min-height: 92vh;
-  background:
-    radial-gradient(circle at center, rgba(208,0,0,0.20), transparent 28%),
-    linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.95)),
-    url("../images/backgroundtest.JPG");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -54,6 +84,12 @@ body {
   padding: 100px 20px;
   position: relative;
   overflow: hidden;
+  perspective: 900px; /* makes hover scaling look 3D */
+}
+
+.hero h1,
+.hero p {
+  transform: translateZ(30px);
 }
 
 .hero h1 {
@@ -186,9 +222,6 @@ body {
 
 .extras {
   position: relative;
-  background:
-    radial-gradient(circle at center, rgba(208,0,0,0.13), transparent 38%),
-    #0b0b0b;
 }
 
 .extra-grid div {
@@ -238,9 +271,6 @@ body {
 
 .service-area {
   padding: 110px 6%;
-  background:
-    radial-gradient(circle at center, rgba(208,0,0,0.16), transparent 42%),
-    #070707;
 }
 
 .area-box {
@@ -342,9 +372,6 @@ body {
 
 .gallery {
   position: relative;
-  background:
-    radial-gradient(circle at center, rgba(208,0,0,0.14), transparent 40%),
-    #070707;
 }
 
 .comparison-grid {
@@ -425,9 +452,6 @@ body {
 
 .testimonials {
   position: relative;
-  background:
-    radial-gradient(circle at center, rgba(208,0,0,0.12), transparent 42%),
-    #080808;
 }
 
 .reviews-grid {
@@ -630,7 +654,6 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   align-items: start;
   gap: 80px;
-  background: #080808;
   color: #b8b8b8;
 }
 
@@ -782,9 +805,6 @@ footer div:nth-child(2) p {
 .about-section,
 .policies-section {
   position: relative;
-  background:
-    radial-gradient(circle at center, rgba(208,0,0,0.11), transparent 42%),
-    #080808;
 }
 
 .about-box {
@@ -840,6 +860,39 @@ footer div:nth-child(2) p {
   color: #d6d6d6;
   font-size: 20px;
   line-height: 1.55;
+}
+
+.card,
+.review-card,
+.policy-card,
+.about-box,
+.area-box,
+.final-cta,
+.comparison-card {
+  transform-style: preserve-3d;
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.75),
+    0 0 25px rgba(208,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.review-card:hover,
+.policy-card:hover,
+.comparison-card:hover {
+  transform: translateY(-10px) scale(1.01);
+}
+
+.scroll-element {
+  opacity: 0;
+  transform: translateY(30px); /* start slightly below */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-element.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 850px) {
