@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shea Stanton | Personal Website | Home</title>
+  <link rel="icon" type="image/x-icon" href="itis3135/images/favicon1.ico">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #f2efe9;
+      color: #1f2d2b;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.5;
+    }
+
+    header {
+      background-color: #2f6f6a;
+      color: #ffffff;
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 42px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 20px;
+      margin: 6px 0 0;
+      color: #ffffff;
+    }
+
+    main {
+      width: 85%;
+      max-width: 950px;
+      margin: 24px auto;
+    }
+
+    section {
+      background-color: #ffffff;
+      padding: 20px 24px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(31, 45, 43, 0.12);
+      margin-bottom: 18px;
+      border-top: 6px solid #d6c9a8;
+    }
+
+    .title-divider {
+      width: 90px;
+      height: 4px;
+      background-color: #d6c9a8;
+      margin: 14px auto 22px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #2f6f6a;
+      font-size: 30px;
+      margin: 0 0 14px;
+      text-align: center;
+    }
+
+    h3 {
+      color: #2f6f6a;
+      font-size: 23px;
+      margin: 0 0 8px;
+      text-align: center;
+    }
+
+    p,
+    li {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      columns: 2;
+      column-gap: 40px;
+      padding-left: 25px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: #1f2d2b;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #2f6f6a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 14px 18px;
+      color: #1f2d2b;
+      font-size: 16px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    footer a {
+      color: #1f2d2b;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      color: #2f6f6a;
+    }
+
+    @media (max-width: 700px) {
+      header p {
+        font-size: 18px;
+      }
+
+      main {
+        width: 90%;
+        margin: 20px auto;
+      }
+
+      section {
+        padding: 18px;
+      }
+
+      ul {
+        columns: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Shea Stanton | Personal Website</h1>
+    <p>Cybersecurity &amp; AI Student</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Home</h2>
+
+      <div class="title-divider"></div>
+
+      <h3>Welcome</h3>
+      <p>
+        Hi, I'm Shea, and this is the root of my personal website. This page gives a quick look at
+        my interests, goals, and current work.
+      </p>
+      <p>
+        This website also connects to my
+        <a href="itis3135/index.html">ITIS3135 Course Site</a>, where I am building projects for
+        Front-End Web Application Development.
+      </p>
+    </section>
+
+    <section>
+      <h3>About Me</h3>
+      <p>
+        I am a student at UNC Charlotte studying Cybersecurity and Artificial Intelligence.
+        I am interested in learning how technology works and how to build useful digital projects.
+      </p>
+    </section>
+
+    <section>
+      <h3>Interests</h3>
+      <ul>
+        <li>Cybersecurity</li>
+        <li>Artificial Intelligence</li>
+        <li>Entrepreneurship</li>
+        <li>Web development</li>
+        <li>Running & going to the gym</li>
+        <li>Hanging out with friends and family</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Page created by
+      <a href="itis3135/stantonfranchise.co/index.html">Stanton Franchise</a>
+    </p>
+  </footer>
+  <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
+</body>
+</html>
